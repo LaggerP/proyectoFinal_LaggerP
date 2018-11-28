@@ -1,0 +1,32 @@
+.Welcome{
+    display: grid;
+    grid-template-columns: repeat(2, 50%) ;
+}
+
+.Welcome_Left{
+    
+}
+
+#videoWelcome{
+    position: absolute; 
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: -100;
+    overflow: hidden;
+}
+
+.Welcome_Right{
+    height:100vh;
+    margin: 0;
+    padding: 50px 70px 50px 70px;
+    border: 20px;
+    background-color: white;
+    -webkit-box-shadow: -14px 3px 24px 0px rgba(0,0,0,0.43);
+    -moz-box-shadow: -14px 3px 24px 0px rgba(0,0,0,0.43);
+    box-shadow: -14px 3px 24px 0px rgba(0,0,0,0.43);
+    
+}
