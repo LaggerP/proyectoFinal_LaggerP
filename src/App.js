@@ -7,9 +7,10 @@ import Login from './components/Login';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      user: {},
-    };
+    this.state = ({
+      user: null,
+    });
+    //this.authListener = this.authListener.bind(this);
   }
 
   componentDidMount() {
@@ -20,9 +21,10 @@ class App extends Component {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({ user });
-        console.log("entro");
+        console.log('if', user);
       } else {
         this.setState({ user: null });
+        console.log('else', user)
       }
     });
   }

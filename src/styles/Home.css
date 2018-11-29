@@ -1,0 +1,27 @@
+body{
+    background-color: #E0F2F7;
+}
+
+.Home_profile{
+    min-width: 100%;
+    height: auto; 
+    margin: 30px auto;
+    padding: 10px;
+    background-color: white;
+}
+
+
+.Home_infoPost{
+    min-width: 100%; 
+    margin: 30px auto;
+    padding: 10px;
+    background-color: white;
+}
+
+.Home_infoFromServer{
+    min-width: 100%;
+    min-height: 100%; 
+    margin: 30px auto;
+    padding: 10px;
+    background-color: white;
+}
