@@ -4,9 +4,18 @@ import 'normalize.css'
 import './index.css';
 import App from './App';
 
+//redux
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import postReducer from './reducer/postReducer';
+
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root')
+const store = createStore(postReducer);
+
+ReactDOM.render(<Provider store={store}>
+                    <App />
+                </Provider>, document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

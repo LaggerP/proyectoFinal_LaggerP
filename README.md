@@ -6,6 +6,7 @@ Proyecto libre de modificación. Solamente descargar el mismo o clonarlo y corre
 
  - [x] Crear menú provisorio de login y registro.
  - [x] Modificar menú a un menú mas completo.
+ - [ ] CRUD.
  - [ ] Diseñar pantalla de bienvenida al usuario logeado.
  - [ ] Crear base de datos.
  - [ ] Hacer la web SPA.
