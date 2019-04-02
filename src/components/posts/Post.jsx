@@ -11,7 +11,7 @@ class Post extends Component {
   }
 
   delete() {
-    axios.get(`${URL_API}/delete/`+ this.props.obj._id)
+    axios.get(`${URL_API}/apiPost/delete/`+ this.props.obj._id)
       .then(console.log('Deleted'))
       .catch(err => console.log(err))
   }
