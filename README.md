@@ -8,12 +8,12 @@ Proyecto libre de modificación. Solamente descargar el mismo o clonarlo y corre
  - [x] Modificar menú a un menú mas completo.
  - [ ] CRUD.
  - [ ] Diseñar pantalla de bienvenida al usuario logeado.
- - [ ] Crear base de datos.
+ - [x] Crear base de datos.
  - [ ] Hacer la web SPA.
  - [ ] Hacer web 100% responsive. 
- - [ ] Enlazar el front con el back.
+ - [x] Enlazar el front con el back.
 
 ##
 
 
-https://laggerp.me
+https://laggerp.dev
