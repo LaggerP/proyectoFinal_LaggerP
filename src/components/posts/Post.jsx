@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../styles/Post.css'
 import axios from 'axios'
 
-const URL_API = process.env.URL_API || 3000;
+const URL_API = process.env.URL_API;
 
 class Post extends Component {
   constructor(props) {

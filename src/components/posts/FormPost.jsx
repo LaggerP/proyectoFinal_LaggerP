@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../styles/FormPost.css'
 import axios from 'axios';
 
-const URL_API = process.env.URL_API || 3000;
+const URL_API = process.env.URL_API;
 
 export default class PostForm extends Component{
   constructor(props) {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import Post from './Post'
 
-const URL_API = process.env.URL_API || 3000;
+const URL_API = process.env.URL_API;
 
 export default class AllPost extends Component {
     constructor(props) {
