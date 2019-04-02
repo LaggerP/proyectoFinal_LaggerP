@@ -35,7 +35,7 @@ class Home extends Component {
                       <li class="list-group-item">Dapibus ac facilisis in</li>
                       <li class="list-group-item">Vestibulum at eros</li>
                     </ul>
-                    <button onClick={this.logout} type="button" class="btn btn-light">Salir</button>
+                    <button onClick={this.logout} type="button" class="btn btn-light" id="botonSalir">Cerrar sesión</button>
                 </div>
                 
               </div>

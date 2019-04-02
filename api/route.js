@@ -1,0 +1,41 @@
+// business.route.js
+
+const express = require('express');
+const postRoutes = express.Router();
+
+// Require schemaPost model in our routes module
+let schemaPost = require('./schemaPost');
+
+// Defined store route
+postRoutes.route('/add').post(function (req, res) {
+  let post = new schemaPost(req.body);
+  post.save()
+    .then(post => {
+      res.status(200).json({'post': 'post in added successfully'});
+    })
+    .catch(err => {
+    res.status(400).send("unable to save to database");
+    });
+});
+
+// Defined get data(index or listing) route
+postRoutes.route('/').get(function (req, res) {
+    schemaPost.find(function(err, posts){
+    if(err){
+      console.log(err);
+    }
+    else {
+      res.json(posts);
+    }
+  });
+});
+
+// Defined delete | remove | destroy route
+postRoutes.route('/delete/:id').get(function (req, res) {
+    schemaPost.findByIdAndRemove({_id: req.params.id}, function(err, post){
+        if(err) res.json(err);
+        else res.json('Successfully removed');
+    });
+});
+
+module.exports = postRoutes;

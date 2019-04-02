@@ -1,22 +1,37 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import axios from 'axios'
 import Post from './Post'
 
-class AllPost extends Component {
+
+export default class AllPost extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { posts: [] };
+    }
+    componentDidMount() {
+        //mas adelante se cambia por https://laggerpfinal.herokuapp.com/
+
+        axios.get('http://localhost:4000/apiPost')
+            .then(response => {
+                this.setState({ posts: response.data });
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+    }
+    PostPublicados() {
+        return this.state.posts.map(function (object, i) {
+            return <Post obj={object} key={i} />;
+        });
+    }
+
     render() {
         return (
             <div>
-                <h1>All Posts</h1>
-                {console.log(this.props.comment)}
-                {this.props.comment.map((post) => <Post post={post}/>)}
+                <h4>Últimos posteos</h4>
+                <hr />
+                {this.PostPublicados()}
             </div>
         );
     }
 }
-
-const mapStateToProps = state => ({
-    comment: state,
-})
-
-
-export default connect(mapStateToProps)(AllPost);

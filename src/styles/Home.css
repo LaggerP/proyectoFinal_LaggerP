@@ -15,6 +15,7 @@ body{
     min-width: 100%; 
     margin: 30px auto;
     padding: 10px;
+    border-radius: 6px 6px 6px 6px;
     background-color: white;
 }
 
@@ -24,4 +25,13 @@ body{
     margin: 30px auto;
     padding: 10px;
     background-color: white;
+}
+
+#botonSalir{
+    background-color: rgb(148, 197, 236);
+}
+#botonSalir:hover{
+    color: white;
+    background-color: rgb(223, 60, 60);
+   
 }
