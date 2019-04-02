@@ -9,8 +9,7 @@ class Post extends Component {
   }
 
   delete() {
-      //mas adelante se cambia por https://laggerpfinal.herokuapp.com/
-    axios.get('http://localhost:4000/apiPost/delete/' + this.props.obj._id)
+    axios.get('https://laggerpfinal.herokuapp.com/apiPost/delete/' || "http://localhost:4000" + this.props.obj._id)
       .then(console.log('Deleted'))
       .catch(err => console.log(err))
   }

@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import Post from './Post'
 
-
 export default class AllPost extends Component {
     constructor(props) {
         super(props);
         this.state = { posts: [] };
     }
-    componentDidMount() {
-        //mas adelante se cambia por https://laggerpfinal.herokuapp.com/
 
-        axios.get('http://localhost:4000/apiPost')
+
+    componentDidMount() {
+        axios.get("https://laggerpfinal.herokuapp.com/apiPost" || "http://localhost:4000")
             .then(response => {
                 this.setState({ posts: response.data });
             })
