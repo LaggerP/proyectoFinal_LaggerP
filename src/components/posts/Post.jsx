@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../../styles/Post.css'
 import axios from 'axios'
 
+const URL_API = process.env.URL_API || 3000;
+
 class Post extends Component {
   constructor(props) {
     super(props);
@@ -9,7 +11,7 @@ class Post extends Component {
   }
 
   delete() {
-    axios.get('https://laggerpfinal.herokuapp.com/apiPost/delete/' || "http://localhost:4000" + this.props.obj._id)
+    axios.get(`${URL_API}/delete/`+ this.props.obj._id)
       .then(console.log('Deleted'))
       .catch(err => console.log(err))
   }

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import Post from './Post'
 
+const URL_API = process.env.URL_API || 3000;
+
 export default class AllPost extends Component {
     constructor(props) {
         super(props);
@@ -10,7 +12,7 @@ export default class AllPost extends Component {
 
 
     componentDidMount() {
-        axios.get("https://laggerpfinal.herokuapp.com/apiPost" || "http://localhost:4000")
+        axios.get(`${URL_API}`)
             .then(response => {
                 this.setState({ posts: response.data });
             })
