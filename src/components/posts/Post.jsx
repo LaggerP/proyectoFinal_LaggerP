@@ -11,7 +11,7 @@ class Post extends Component {
   }
 
   delete() {
-    axios.get("http://localhost:4000/apiPost/delete/"+ this.props.obj._id)
+    axios.get("hhttps://laggerpfinal.herokuapp.com/apiPost/delete/"+ this.props.obj._id)
       .then(console.log('Deleted'))
       .catch(err => console.log(err))
   }

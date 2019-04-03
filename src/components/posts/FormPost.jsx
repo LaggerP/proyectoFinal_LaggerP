@@ -27,7 +27,7 @@ export default class PostForm extends Component{
     const obj = {
       published_post: this.state.published_post,
     };
-    axios.post("http://localhost:4000/apiPost/add", obj).then(res => console.log(res.data));
+    axios.post("https://laggerpfinal.herokuapp.com/apiPost/add", obj).then(res => console.log(res.data));
     this.setState({
       published_post: '',
     })

@@ -12,7 +12,7 @@ export default class AllPost extends Component {
 
 
     componentDidMount() {
-        axios.get("http://localhost:4000/apiPost")
+        axios.get("https://laggerpfinal.herokuapp.com/apiPost")
             .then(response => {
                 this.setState({ posts: response.data });
             })
