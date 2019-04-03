@@ -12,7 +12,7 @@ export default class AllPost extends Component {
 
 
     componentDidMount() {
-        axios.get(`${URL_API}/apiPost`)
+        axios.get("http://localhost:4000/apiPost")
             .then(response => {
                 this.setState({ posts: response.data });
             })
