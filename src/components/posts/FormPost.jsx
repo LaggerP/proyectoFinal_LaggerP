@@ -27,7 +27,7 @@ export default class PostForm extends Component{
     const obj = {
       published_post: this.state.published_post,
     };
-    axios.post("https://laggerpfinal.herokuapp.com/apiPost/add", obj).then(res => console.log(res.data));
+    axios.post("http://localhost:4000/apiPost/add", obj).then(res => console.log(res.data));
     this.setState({
       published_post: '',
     })
@@ -37,7 +37,7 @@ export default class PostForm extends Component{
     return (
       <div className="FormPost">
         <form>
-          <div class="form-group">
+          <div className="form-group">
             <h4>Publique su mensaje</h4>
             <textarea 
               className="form-control" 

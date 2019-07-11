@@ -11,7 +11,7 @@ const postsRoute = require('./route');
 var urlDB = process.env.MONGOLAB_URI;
 //urlDB || config.DB || 
 mongoose.Promise = global.Promise;
-mongoose.connect(urlDB, { useNewUrlParser: true }).then(
+mongoose.connect(config.DB, { useNewUrlParser: true }).then(
   () => {console.log('Database is connected') },
   err => { console.log('Can not connect to the database'+ err)}
 );

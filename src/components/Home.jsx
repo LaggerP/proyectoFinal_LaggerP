@@ -8,14 +8,13 @@ class Home extends Component {
     constructor(props){
         super(props);
         this.logout = this.logout.bind(this);
-        this.state = {
-          email: null,
-        }
     }
 
     logout() {
       fire.auth().signOut();
     }
+
+    
 
   render() {
     return (
@@ -24,18 +23,18 @@ class Home extends Component {
           <div className="row">
             <div className="col-sm-4">
               <div className="Home_profile">
-                <div class="card">
-                    <img class="card-img-top" src="" alt="Card img cap"/>
-                    <div class="card-body">
-                      <h5 class="card-title">Nombre obtenido de la BD</h5>
-                      <p class="card-text">Biografia obtenida de la BD</p>
+                <div className="card">
+                    <img className="card-img-top" src={this.props.img} alt="Card img cap"/>
+                    <div className="card-body">
+                      <h5 className="card-title">{this.props.user}</h5>
+                      <p className="card-text">Biografia obtenida de la BD</p>
                     </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Cras justo odio</li>
-                      <li class="list-group-item">Dapibus ac facilisis in</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item">Cras justo odio</li>
+                      <li className="list-group-item">Dapibus ac facilisis in</li>
+                      <li className="list-group-item">Vestibulum at eros</li>
                     </ul>
-                    <button onClick={this.logout} type="button" class="btn btn-light" id="botonSalir">Cerrar sesión</button>
+                    <button onClick={this.logout} type="button" className="btn btn-light" id="botonSalir">Cerrar sesión</button>
                 </div>
                 
               </div>

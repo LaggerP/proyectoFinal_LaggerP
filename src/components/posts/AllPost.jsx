@@ -10,9 +10,12 @@ export default class AllPost extends Component {
         this.state = { posts: [] };
     }
 
-
     componentDidMount() {
-        axios.get("https://laggerpfinal.herokuapp.com/apiPost")
+        this.interval = setInterval(()=> this.getData(), 2000) //actualiza data sin importar cuenta logeada
+    }
+
+    getData() {
+        axios.get("http://localhost:4000/apiPost")
             .then(response => {
                 this.setState({ posts: response.data });
             })
@@ -20,9 +23,10 @@ export default class AllPost extends Component {
                 console.log(error);
             })
     }
+
     PostPublicados() {
         return this.state.posts.map(function (object, i) {
-            return <Post obj={object} key={i} />;
+            return <Post obj={object} key={i}/>;
         });
     }
 

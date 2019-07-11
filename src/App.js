@@ -20,18 +20,20 @@ class App extends Component {
   authListener() {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
-        this.setState({ user });
-        console.log('if', user);
+        this.setState({ user: user });
       } else {
         this.setState({ user: null });
-        console.log('else', user)
       }
     });
   }
   render() {
     return (
       <div className="App">
-        {this.state.user ? (<Home />) : (<Login />)}
+        {this.state.user ? (<Home 
+                                user={this.state.user.email} 
+                                img={this.state.user.photoURL}/>) 
+                                
+                                : (<Login />)}
       </div>
     )
   };
