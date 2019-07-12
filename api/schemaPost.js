@@ -4,8 +4,11 @@ const Schema = mongoose.Schema;
 // Define collection and schema for post
 let Post = new Schema({
   published_post: {
-    type: String
+    type: String,
   },
+  userPost:{
+    type:String
+  }
 },{
     collection: 'post'
 });
